@@ -1,0 +1,9 @@
+/// <reference types="cypress"/>
+
+describe('Test Suite Name',function()
+{
+    it('Test Case Title',function(){
+        
+    
+    })
+})
