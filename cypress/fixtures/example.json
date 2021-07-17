@@ -2,10 +2,25 @@
   "Step1": [
   {
     "event_name": "Pakistan Tour",
-    "event_organizer": "Adina Fakih"
+    "event_organizer": "Adina Fakih",
+    "date": "19/07/2021",
+    "start_date": "19/07/2021",
+    "end_date": "21/07/2021",
+    "start_time": "05:30",
+    "end_time": "12:00",
+    "to": "5:30",
+    "from": "12:00"
   },
   {
     "event_name": "Paris Tour",
-    "event_organizer": "Adi 123 - +"
+    "event_organizer": "Adi 123 - +",
+    "date": "25/2/2025",
+    "start_date": "19/07/2021",
+    "end_date": "21/07/2021",
+    "start_time": "11:43",
+    "end_time": "02:00",
+    "to": "20:30",
+    "from": "12:88"
+
   }] 
 }
