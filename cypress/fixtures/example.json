@@ -22,5 +22,9 @@
     "to": "20:30",
     "from": "12:88"
 
-  }] 
+  }],
+  "Step2":[
+  {
+    "event_location": "123456789 house, qwertyuiopasdfghjklzxcvbnm Road, Blockno #1234567890, Karachi, Pakistan"
+  }]
 }

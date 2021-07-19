@@ -17,7 +17,10 @@ describe('Test Create Event', () =>
         //this.data.Step1.forEach(elements => {this.data.Step1.length
             //cy.Step1_One_day_Event(this.data.Step1[i].event_name, this.data.Step1[i].event_organizer,this.data.Step1[i].date,this.data.Step1[i].start_time,this.data.Step1[i].end_time)
             cy.Step1_More_than_a_day(this.data.Step1[i].event_name,this.data.Step1[i].event_organizer,this.data.Step1[i].start_date,this.data.Step1[i].end_date,this.data.Step1[i].to,this.data.Step1[i].from)
-        //})
+            //cy.Step2_Phycical_Event(this.data.Step2[i].event_location)
+            //cy.Step2_Online_Event(this.data.Step2[i].event_location)
+            //})
+        cy.wait(3000)
         }
     })
 })

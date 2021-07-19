@@ -14,5 +14,16 @@
   },
   "dependencies": {
     "xpath": "0.0.32"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdinaFakih/PhoenixDAO-Events-Dapp-Automation.git"
+  },
+  "keywords": [
+    "Xord"
+  ],
+  "bugs": {
+    "url": "https://github.com/AdinaFakih/PhoenixDAO-Events-Dapp-Automation/issues"
+  },
+  "homepage": "https://github.com/AdinaFakih/PhoenixDAO-Events-Dapp-Automation#readme"
 }
