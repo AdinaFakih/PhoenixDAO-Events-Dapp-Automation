@@ -1,30 +1,27 @@
 {
-  "Step1": [
+  "info": [
   {
     "event_name": "Pakistan Tour",
     "event_organizer": "Adina Fakih",
-    "date": "19/07/2021",
-    "start_date": "19/07/2021",
-    "end_date": "21/07/2021",
-    "start_time": "05:30",
-    "end_time": "12:00",
-    "to": "5:30",
-    "from": "12:00"
+    "event_location": "123456789 house, qwertyuiopasdfghjklzxcvbnm Road, Blockno #1234567890, Karachi, Pakistan",
+    "event_link": "http://phoenixdao-events-dapp.herokuapp.com/createevent",
+    "ticketPrice": "1",
+    "ticketName1": "VIP",
+    "ticketName2": "nobody cares about you",
+    "topic" : "Food & Drink",
+    "filepath": "images/Banner.jpg",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "no_of_tickets": "12"
   },
   {
     "event_name": "Paris Tour",
     "event_organizer": "Adi 123 - +",
-    "date": "25/2/2025",
-    "start_date": "19/07/2021",
-    "end_date": "21/07/2021",
-    "start_time": "11:43",
-    "end_time": "02:00",
-    "to": "20:30",
-    "from": "12:88"
-
-  }],
-  "Step2":[
-  {
-    "event_location": "123456789 house, qwertyuiopasdfghjklzxcvbnm Road, Blockno #1234567890, Karachi, Pakistan"
+    "event_location": "1234567891112345666667890 road",
+    "event_link": "www.google.com",
+    "ticketPrice": "0.5",
+    "ticketName": "nobody cares about you",
+    "filepath": "images/Banner.jpg",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "no_of_tickets": "8"
   }]
 }
