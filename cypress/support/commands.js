@@ -17,8 +17,12 @@ Cypress.Commands.add('visit_Create_Events', () => {
 // Cypress.Commands.add('Create_Event_Form', () => { 
 //     cy.url().should('include','createevent')
 //     cy.Step1_One_day_Event()
-//     cy.Step1_More_than_a_day()
+//     cy.Step2_Physical_Event()
 // })
+
+Cypress.Commands.add('Wallet_Restrict', () => { 
+    cy.get('input[name="checkedB"]').check().should('be.checked')
+})
 
 Cypress.Commands.add('Step1_One_day_Event', (event_name,event_organizer) => { 
     cy.title().should('be.equal','PhoenixDAO Events Marketplace - Buy Tickets to Events in PHNX.')
@@ -108,6 +112,8 @@ Cypress.Commands.add('Step3_Free_Event_unlimited', () => {
     cy.get('div > ul > li').contains('Free Event').click()
     //TICKET AVAILABILITY
     cy.get('input[value="unlimited"]').check().should('be.checked').and('have.value','unlimited')
+    //Restrict Wallet Address to one Ticket
+    cy.Wallet_Restrict()
     //Click NEXT button
     cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click()
 })
@@ -130,6 +136,8 @@ Cypress.Commands.add('Step3_Paid_Single_Event_unlimited', (ticketPrice) => {
     cy.get('#input-with-icon-textfield').should('be.visible').should('be.enabled').type(ticketPrice)
     //TICKET AVAILABILITY
     cy.get('input[value="unlimited"]').check().should('be.checked').and('have.value','unlimited')
+    //Restrict Wallet Address to one Ticket
+    cy.Wallet_Restrict()
     //Click NEXT button
     cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click({force: true})
 })

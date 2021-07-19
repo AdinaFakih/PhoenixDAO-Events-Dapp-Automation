@@ -19,7 +19,8 @@
     "event_location": "1234567891112345666667890 road",
     "event_link": "www.google.com",
     "ticketPrice": "0.5",
-    "ticketName": "nobody cares about you",
+    "ticketName1": "VIP",
+    "ticketName2": "nobody cares about you",
     "filepath": "images/Banner.jpg",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
     "no_of_tickets": "8"

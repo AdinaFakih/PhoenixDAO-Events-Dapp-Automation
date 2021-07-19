@@ -19,9 +19,9 @@ describe('Test Create Event', () =>
             //cy.Step3_Free_Event_unlimited()
             //cy.Step3_Paid_Single_Event_unlimited(this.data.info[i].ticketPrice)
             //cy.Step3_Paid_Multiple_Event_unlimited(this.data.info[i].ticketName1,this.data.info[i].ticketName2,this.data.info[i].ticketPrice)
-            //cy.Step3_Free_Event_limited(this.data.info[i].no_of_tickets)
+            cy.Step3_Free_Event_limited(this.data.info[i].no_of_tickets)
             //cy.Step3_Paid_Single_Event_limited(this.data.info[i].ticketPrice,this.data.info[i].no_of_tickets)
-            cy.Step3_Paid_Multiple_Event_limited(this.data.info[i].ticketName1,this.data.info[i].ticketName2,this.data.info[i].ticketPrice,this.data.info[i].no_of_tickets)
+            //cy.Step3_Paid_Multiple_Event_limited(this.data.info[i].ticketName1,this.data.info[i].ticketName2,this.data.info[i].ticketPrice,this.data.info[i].no_of_tickets)
             cy.Step4(this.data.info[i].description)
         }
     })
