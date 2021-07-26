@@ -12,7 +12,7 @@ describe('Test Create Event', () =>
         cy.visit_Events_Dapps()
         cy.visit_Create_Events()
         for (let i = 0; i < 1; i++){
-            cy.Step1_One_day_Event(this.data.info[i].event_name, this.data.info[i].event_organizer)
+            cy.Step1_One_day_Event(this.data.info[i].event_name, this.data.info[i].event_organizer, this.data.info[i].date)
             //cy.Step1_More_than_a_day(this.data.info[i].event_name,this.data.info[i].event_organizer)
             cy.Step2_Physical_Event(this.data.info[i].event_location,this.data.info[i].topic,this.data.info[i].filepath)
             //cy.Step2_Online_Event(this.data.info[i].event_link)

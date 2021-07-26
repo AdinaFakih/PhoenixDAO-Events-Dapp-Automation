@@ -24,7 +24,11 @@ Cypress.Commands.add('Wallet_Restrict', () => {
     cy.get('input[name="checkedB"]').check().should('be.checked')
 })
 
-Cypress.Commands.add('Step1_One_day_Event', (event_name,event_organizer) => { 
+Cypress.Commands.add('Next', () => { 
+    cy.get(".jss26 > .MuiButton-contained > .MuiButton-label").should('be.visible').click() 
+})
+
+Cypress.Commands.add('Step1_One_day_Event', (event_name,event_organizer,date) => { 
     cy.title().should('be.equal','PhoenixDAO Events Marketplace - Buy Tickets to Events in PHNX.')
     cy.contains('Create Event').should('be.visible')
     cy.contains('Event Details').should('be.visible')
@@ -34,7 +38,8 @@ Cypress.Commands.add('Step1_One_day_Event', (event_name,event_organizer) => {
     //Click on calendar icon
     cy.get(':nth-child(1) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').click()
     //click on date
-    cy.xpath("/html/body/div[2]/div[3]/div/div/div[2]/div/div[4]/div[6]/button/span[1]/p").should('be.visible').click()
+    cy.xpath("//body/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[5]/div["+ date +"]/button[1]/span[1]/p[1]").should('be.visible').click()
+    //cy.xpath("//body/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[5]/div[4]/button[1]/span[1]/p[1]").should('be.visible').click()
     //click on clock icon for Start time
     cy.get('[style="display: flex; justify-content: space-between;"] > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').click()
     //Click on OK button for Start time
@@ -44,7 +49,7 @@ Cypress.Commands.add('Step1_One_day_Event', (event_name,event_organizer) => {
     //click on OK for end time
     cy.get('.MuiDialogActions-root > :nth-child(2)').should('be.visible').click()
     //Click NEXT button
-    cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click() 
+    cy.Next()
 })
 
 Cypress.Commands.add('Step1_More_than_a_day', (event_name,event_organizer) => { 
@@ -71,7 +76,7 @@ Cypress.Commands.add('Step1_More_than_a_day', (event_name,event_organizer) => {
     //Click on Ok
     cy.get('.MuiDialogActions-root > :nth-child(2)').should('be.visible').click()
     //Click NEXT button
-    cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click()
+    cy.Next()
 })
 
 Cypress.Commands.add('Step2_Physical_Event', (event_location) => { 
@@ -88,7 +93,7 @@ Cypress.Commands.add('Step2_Physical_Event', (event_location) => {
     cy.get('#demo-simple-select-outlined').click()
     cy.get('div > ul > li').contains('Food & Drink').click()
     //Click NEXT button
-    cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click()
+    cy.Next()
 })
 
 Cypress.Commands.add('Step2_Online_Event', (event_link,topic,filepath) => { 
@@ -104,7 +109,7 @@ Cypress.Commands.add('Step2_Online_Event', (event_link,topic,filepath) => {
     cy.get('#demo-simple-select-outlined').click()
     cy.get('div > ul > li').contains(topic).click()
     //Click NEXT button
-    cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click()
+    cy.Next()
 })
 
 Cypress.Commands.add('Step3_Free_Event_unlimited', () => {
@@ -115,7 +120,7 @@ Cypress.Commands.add('Step3_Free_Event_unlimited', () => {
     //Restrict Wallet Address to one Ticket
     cy.Wallet_Restrict()
     //Click NEXT button
-    cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click()
+    cy.Next()
 })
 
 Cypress.Commands.add('Step3_Free_Event_limited', (no_of_tickets) => {
@@ -126,7 +131,7 @@ Cypress.Commands.add('Step3_Free_Event_limited', (no_of_tickets) => {
     //NUMBER OF TICKETS
     cy.get('input[id="outlined-basic"]').should('be.visible').should('be.enabled').type(no_of_tickets)
     //Click NEXT button
-    cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click()
+    cy.Next()
 })
 
 Cypress.Commands.add('Step3_Paid_Single_Event_unlimited', (ticketPrice) => {
@@ -139,7 +144,7 @@ Cypress.Commands.add('Step3_Paid_Single_Event_unlimited', (ticketPrice) => {
     //Restrict Wallet Address to one Ticket
     cy.Wallet_Restrict()
     //Click NEXT button
-    cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click({force: true})
+    cy.Next()
 })
 
 Cypress.Commands.add('Step3_Paid_Single_Event_limited', (ticketPrice,no_of_tickets) => {
@@ -152,7 +157,7 @@ Cypress.Commands.add('Step3_Paid_Single_Event_limited', (ticketPrice,no_of_ticke
     //NUMBER OF TICKETS
     cy.get('input[id="outlined-basic"]').should('be.visible').should('be.enabled').type(no_of_tickets)
     //Click NEXT button
-    cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click({force: true})
+    cy.Next()
 })
 
 Cypress.Commands.add('Step3_Paid_Multiple_Event_unlimited', (ticketName1,ticketName2,ticketPrice) => {
@@ -177,7 +182,7 @@ Cypress.Commands.add('Step3_Paid_Multiple_Event_unlimited', (ticketName1,ticketN
     //Click on Save button
     cy.xpath('//span[contains(text(),"Save")]').click()
     //Click NEXT button
-    cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click()
+    cy.Next()
 })
 
 Cypress.Commands.add('Step3_Paid_Multiple_Event_limited', (ticketName1,ticketName2,ticketPrice,no_of_tickets) => {
@@ -206,11 +211,11 @@ Cypress.Commands.add('Step3_Paid_Multiple_Event_limited', (ticketName1,ticketNam
     //Click on Save button
     cy.xpath('//span[contains(text(),"Save")]').click()
     //Click NEXT button
-    cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click()
+    cy.Next()
 })
 
 Cypress.Commands.add('Step4', (description) => {
     cy.get(".public-DraftStyleDefault-block").type(description)
     cy.get('input[class="jss14"]').check().should('be.checked')
-    cy.get(".jss25 > .MuiButton-contained > .MuiButton-label").should('be.visible').click()
+    cy.Next()
 })

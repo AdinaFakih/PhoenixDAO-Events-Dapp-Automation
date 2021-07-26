@@ -11,7 +11,8 @@
     "topic" : "Food & Drink",
     "filepath": "images/Banner.jpg",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    "no_of_tickets": "12"
+    "no_of_tickets": "12",
+    "date": "3"
   },
   {
     "event_name": "Paris Tour",
@@ -23,6 +24,8 @@
     "ticketName2": "nobody cares about you",
     "filepath": "images/Banner.jpg",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    "no_of_tickets": "8"
+    "no_of_tickets": "8",
+    "topic" : "DJ",
+    "date": "6"
   }]
 }
