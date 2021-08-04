@@ -25,7 +25,7 @@ Cypress.Commands.add('Wallet_Restrict', () => {
 })
 
 Cypress.Commands.add('Next', () => { 
-    cy.get(".jss26 > .MuiButton-contained > .MuiButton-label").should('be.visible').click() 
+    cy.get('.jss47 > .MuiButton-contained > .MuiButton-label').should('be.visible').click() 
 })
 
 Cypress.Commands.add('Step1_One_day_Event', (event_name,event_organizer,date) => { 
@@ -38,15 +38,18 @@ Cypress.Commands.add('Step1_One_day_Event', (event_name,event_organizer,date) =>
     //Click on calendar icon
     cy.get(':nth-child(1) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').click()
     //click on date
-    cy.xpath("//body/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[5]/div["+ date +"]/button[1]/span[1]/p[1]").should('be.visible').click()
-    //cy.xpath("//body/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[5]/div[4]/button[1]/span[1]/p[1]").should('be.visible').click()
+    //cy.xpath("//body/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/div[5]/div["+ date +"]/button[1]/span[1]/p[1]").should('be.visible').click()
+    cy.get(':nth-child(5) > :nth-child(5) > .MuiButtonBase-root > .MuiIconButton-label > .MuiTypography-root').click()
     //click on clock icon for Start time
     cy.get('[style="display: flex; justify-content: space-between;"] > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').click()
     //Click on OK button for Start time
     cy.get('.MuiDialogActions-root > :nth-child(2) > .MuiButton-label').should('be.visible').click()
     //click on clock icon for End time
     cy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').should('be.visible').click()
+    cy.wait(2000)
+    cy.xpath('/html/body/div[3]/div[3]/div/div[1]/div/div[1]/div[1]/button[1]/span[1]/h2').type(3)
     //click on OK for end time
+    cy.wait(3000)
     cy.get('.MuiDialogActions-root > :nth-child(2)').should('be.visible').click()
     //Click NEXT button
     cy.Next()
@@ -87,7 +90,7 @@ Cypress.Commands.add('Step2_Physical_Event', (event_location) => {
     cy.get('input[value="online"]').should('not.be.checked').and('have.value','online')
     cy.get("#event-location").should('be.visible').should('be.enabled').type(event_location)
     //image
-    const filepath = 'images/Banner.jpg'
+    const filepath = 'images/Xord.jpg'
     cy.get('input[type="file"]').attachFile(filepath)
      //Topic dropdown
     cy.get('#demo-simple-select-outlined').click()
@@ -216,6 +219,6 @@ Cypress.Commands.add('Step3_Paid_Multiple_Event_limited', (ticketName1,ticketNam
 
 Cypress.Commands.add('Step4', (description) => {
     cy.get(".public-DraftStyleDefault-block").type(description)
-    cy.get('input[class="jss14"]').check().should('be.checked')
+    cy.get('input[class="jss35"]').check().should('be.checked')
     cy.Next()
 })
