@@ -5,7 +5,7 @@
     "event_organizer": "Adina Fakih",
     "event_location": "123 house, Block no #12, Road xyz, Karachi, Pakistan",
     "event_link": "http://phoenixdao-events-dapp.herokuapp.com/createevent",
-    "ticketPrice": "1",
+    "ticketPrice": "0.2",
     "ticketName1": "VIP",
     "ticketName2": "nobody cares about you",
     "topic" : "Food & Drink",
